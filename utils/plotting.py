@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_pca_scores(df, out_path="results/plots/pca_scores.png"):
+def plot_pca_scores(df):
     systems = df["system"]
     scores = df["PCA_score"]
 
@@ -11,8 +11,8 @@ def plot_pca_scores(df, out_path="results/plots/pca_scores.png"):
     plt.title("Physical Consistency Audit (PCA)")
 
     for i, v in enumerate(scores):
-        plt.text(i, v + 2, str(v), ha="center", fontsize=10)
+        plt.text(i, v + 1, str(v), ha="center", fontsize=9)
 
     plt.tight_layout()
-    plt.savefig(out_path)
+    plt.savefig("results/plots/pca_scores.png")
     plt.close()

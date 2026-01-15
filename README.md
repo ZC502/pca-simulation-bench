@@ -36,6 +36,15 @@ Steps:
 If the extension is not enabled, the "Isaac+Oct" score will be identical
 to the baseline Isaac Sim score.
 
+Note:
+You do NOT need to run `octonion.py` manually.
+
+Once the `octonion_time` extension is enabled, its temporal update logic
+is automatically applied during each PhysX simulation step.
+
+The PCA runner (`pca_runner.py`) only launches simulations and measures
+physical consistency metrics.
+
 
 ```bash
 python runners/pca_runner.py

@@ -8,6 +8,7 @@ from utils.plotting import plot_pca_scores
 SYSTEMS = {
     "MuJoCo": run_mujoco,
     "Isaac Sim": run_isaac,
+    "Isaac+Oct": run_isaac_octonion,
 }
 
 def main():

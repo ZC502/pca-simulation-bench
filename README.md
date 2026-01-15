@@ -20,6 +20,23 @@ independently of task success or solver stability.
 
 ## How to Run
 
+### Isaac Sim + Octonion system
+
+To evaluate the "Isaac+Oct" system, you must first enable the
+Octonion Temporal Semantics extension:
+
+https://github.com/ZC502/Isaac-Sim-Physical-consistency-plugin
+
+Steps:
+1. Clone the extension into your Isaac Sim `exts/` directory
+2. Enable `octonion_time` in the Extension Manager
+3. Restart Isaac Sim
+4. Run `pca_runner.py`
+
+If the extension is not enabled, the "Isaac+Oct" score will be identical
+to the baseline Isaac Sim score.
+
+
 ```bash
 python runners/pca_runner.py
 

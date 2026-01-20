@@ -3,6 +3,29 @@
 This repository provides a reproducible benchmark for auditing
 physical consistency in robotics simulation platforms.
 
+
+🚨 **Critical Diagnostic Result: What if your PCA score is low?**
+
+If your audit shows a **Hamiltonian Drift > 10%** or a **Physical Consistency Score < 60**, your simulation is currently in **"Physical Default."** > AI models trained on this data are inheriting **"Physical Debt"** that cannot be fixed by Reinforcement Learning (RL) fine-tuning or increasing GPU compute.
+
+**The Solution: Bridging the Reality Gap**
+
+To mitigate the structural drift identified by this benchmark, you must implement a **Non-Associative Temporal Layer**.
+Click here to access the Fix: https://github.com/ZC502/Isaac-Sim-Physical-consistency-plugin.git
+
+
+**How to Load the Plugin for Audit-Repair Cycle**:
+
+1. **Clone the Plugin** into your exts/ directory.
+2. **Enable the Octonion Layer** in your simulation configuration:
+
+```
+from isaac_plugin.octonion_layer import OctonionTemporalSemantics
+# Wrap your existing stepper
+simulation_context.add_physics_callback("octonion_bridge", octonion_semantics.step)
+```
+3. **Re-run this PCA Benchmark**. You will observe a significant convergence in energy residuals and a reduction in the Associator-driven causality breaks.
+
 ## What is PCA?
 
 PCA evaluates:

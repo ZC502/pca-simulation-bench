@@ -1,5 +1,12 @@
 # Physical Consistency Audit (PCA)
 
+⚠️ Note on Isaac Sim support
+
+The Isaac Sim PCA runner currently contains placeholder metrics.
+Real measurement is in progress and will be wired directly to the Isaac physics loop.
+Until then, Isaac PCA results should be treated as non-final.
+
+
 This repository provides a reproducible benchmark for auditing
 physical consistency in robotics simulation platforms.
 

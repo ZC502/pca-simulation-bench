@@ -1,8 +1,5 @@
-def run_energy_test():
-    passed = check_energy_conservation_and_convergence()
-    return {
-        "MRED": 0.12 if not passed else 0.02,
-        "EJI": 0.015 if not passed else 0.002,
-        "TVA": 0.02,
-        "bounded": True
-    }
+def run():
+    raise NotImplementedError(
+        "Isaac energy PCA test is not yet wired to the physics loop. "
+        "This file defines the interface only."
+    )
